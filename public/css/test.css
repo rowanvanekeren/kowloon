@@ -1,0 +1,34 @@
+html,
+h1,
+li,
+ul,
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+}
+
+.sideNav {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  background-color: black;
+  float: left;
+}
+
+.main {
+  position: relative;
+  width: calc(100% - 50px);
+  height: 100%;
+  background-color: blue;
+  float: right;
+}
+
+/*# sourceMappingURL=test.css.map */
