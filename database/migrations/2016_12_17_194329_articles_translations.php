@@ -13,28 +13,23 @@ class ArticlesTranslations extends Migration
      */
     public function up()
     {
+
         Schema::create('articles_translations', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('title');
-            $table->string('description');
-            $table->integer('collection_id');
-            $table->integer('category_id');
-            $table->integer('article_id');
+            $table->longText('description');
+            $table->decimal('price', 10, 2);
+            $table->unsignedInteger('collection_id')->nullable();
+            $table->unsignedInteger('category_id')->nullable();
+            $table->unsignedInteger('article_id')->nullable();
+            $table->unsignedInteger('specification_id')->nullable();
             $table->string('locale');
-            $table->foreign('collection_id')
-                ->references('id')
-                ->on('collection')
-                ->onDelete('cascade');
-            $table->foreign('category_id')
-                ->references('id')
-                ->on('categories')
-                ->onDelete('cascade');
-            $table->foreign('article_id')
-                ->references('id')
-                ->on('articles')
-                ->onDelete('cascade');
+
             $table->timestamps();
         });
+
+
     }
 
     /**

@@ -15,18 +15,12 @@ class ArticlesColors extends Migration
     {
         Schema::create('articles_colors', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('article_id');
-            $table->integer('color_id');
-            $table->foreign('article_id')
-                ->references('id')
-                ->on('articles')
-                ->onDelete('cascade');
-            $table->foreign('color_id')
-                ->references('id')
-                ->on('colors')
-                ->onDelete('cascade');
+            $table->integer('article_id')->unsigned()->nullable();;
+            $table->integer('color_id')->unsigned()->nullable();;
             $table->timestamps();
         });
+
+
     }
 
     /**

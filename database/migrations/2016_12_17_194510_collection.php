@@ -15,7 +15,6 @@ class Collection extends Migration
     {
         Schema::create('collection', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('type');
             $table->timestamps();
         });
     }

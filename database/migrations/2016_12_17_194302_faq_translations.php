@@ -16,13 +16,9 @@ class FaqTranslations extends Migration
         Schema::create('faq_translations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('question');
-            $table->string('answer');
+            $table->longText('answer');
             $table->string('locale');
-            $table->integer('faq_id');
-            $table->foreign('faq_id')
-                ->references('id')
-                ->on('faq')
-                ->onDelete('cascade');
+            $table->integer('faq_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }

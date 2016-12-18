@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('welcome/{locale}', function ($locale) {
+Route::get('/welcome/{locale}', 'Controller@GetAllArticles');
+/*Route::get('welcome/{locale}', function ($locale) {
     App::setLocale($locale);
 
     if (App::isLocale('en')) {
@@ -23,4 +24,4 @@ Route::get('welcome/{locale}', function ($locale) {
     }else if(App::isLocale('nl')){
         return view('welcome');
     }
-});
+});*/
