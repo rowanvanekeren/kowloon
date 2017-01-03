@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Articles extends Migration
+class ImagesTranslations extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class Articles extends Migration
      */
     public function up()
     {
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('images_translations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('hot_item');
+            $table->string('image');
+            $table->string('description');
+            $table->string('locale');
+            $table->integer('image_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class Articles extends Migration
      */
     public function down()
     {
-        Schema::drop('articles');
+        Schema::drop('images_translations');
     }
 }

@@ -31,6 +31,6 @@ class SpecificationsTranslations extends Migration
      */
     public function down()
     {
-
+        Schema::drop('specifications_translations');
     }
 }

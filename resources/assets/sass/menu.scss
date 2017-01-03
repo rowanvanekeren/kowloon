@@ -1,0 +1,358 @@
+
+.hidden{
+  display: none !important;
+  visibility: hidden;
+}
+
+#sideNav{
+  position: absolute;
+  height: 100%;
+  background-color: $menu-color;
+  z-index: 10;
+  float:left;
+
+}
+.navBurger{
+  width:100%;
+  display: flex;
+  align-items: center;
+  div{
+    display: inline-block;
+  }
+  .icon{
+    width: $nav-width;
+  }
+  i{
+    margin: 0 auto;
+  }
+}
+.help{
+  .help-section{
+    width:100%;
+    display: flex;
+    align-items: center;
+    div{
+      display: inline-block;
+    }
+    .icon{
+      width: $nav-width;
+    }
+    i{
+      margin: 0 auto;
+    }
+    a{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .icon-text-help{
+      color: $nav-help-font-color;
+      font-family: $nav-font;
+    }
+  }
+}
+/*.inlinetest{
+  width:100%;
+  display: flex;
+  align-items: center;
+
+  div{
+    display: inline-block;
+
+  }
+  a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+   .icon{
+
+      width: $nav-width;
+    }
+    i{
+      margin: 0 auto;
+    }
+
+    .icon-text-animal{
+      color: $nav-animals-font-color;
+      font-family: $nav-font;
+    }
+    .icon-text-help{
+      color: $nav-help-font-color;
+      font-family: $nav-font;
+    }
+
+}*/
+
+.animals{
+  div{
+    display: inline-block;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .icon{
+
+    width: $nav-width;
+  }
+  i{
+    margin: 0 auto;
+  }
+
+  .icon-text-animal{
+    color: $nav-animals-font-color;
+    font-family: $nav-font;
+  }
+  .icon-text-help{
+    color: $nav-help-font-color;
+    font-family: $nav-font;
+  }
+  .dog{
+    width:100%;
+    display: flex;
+    align-items: center;
+    .active{
+      .sprite-dog_white{
+        background-position: -71px -45px!important;
+      }
+    }
+    &:hover{
+      .sprite-dog_white{
+        background-position: -71px -45px!important;
+      }
+    }
+  }
+  .cat{
+    width:100%;
+    display: flex;
+    align-items: center;
+    .active{
+      .sprite-cat_white{
+        background-position: -109px -5px!important;
+      }
+    }
+    &:hover{
+      .sprite-cat_white{
+        background-position: -109px -5px!important;
+      }
+    }
+  }
+  .fish{
+    width:100%;
+    display: flex;
+    align-items: center;
+    .active{
+      .sprite-fish_white{
+        background-position: -5px -88px!important;
+      }
+    }
+    &:hover{
+      .sprite-fish_white{
+        background-position: -5px -88px!important;
+      }
+    }
+  }
+  .bird{
+    width:100%;
+    display: flex;
+    align-items: center;
+    .active{
+      .sprite-bird_white{
+        background-position: -5px -5px!important;
+      }
+    }
+    &:hover{
+      .sprite-bird_white{
+        background-position: -5px -5px!important;
+      }
+    }
+  }
+  .hamster{
+    width:100%;
+    display: flex;
+    align-items: center;
+    .active{
+      .sprite-hamster_white{
+        background-position: -79px -88px!important;
+      }
+    }
+    &:hover{
+      .sprite-hamster_white{
+        background-position: -79px -88px!important;
+      }
+    }
+  }
+}
+.sideNavMin{
+  width: $nav-width
+
+}
+
+.sideNavCollapsed{
+  width: $nav-width-collapse;
+
+
+}
+
+
+.main{
+  position: relative;
+  width: calc(100% - #{$nav-width});
+  height: 100%;
+  background-color: blue;
+  float:right;
+
+}
+.navHelp{
+  margin-top: 10px;
+  width: 100%;
+}
+.navBurger{
+  width: $nav-width;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: $burger-bg-color;
+}
+
+#navFooter{
+
+  position: absolute;
+  bottom: 10px;
+}
+.navFooterMin{
+  left: 5px;
+}
+.navFooterCollapsed{
+  left: -25px;
+
+}
+.navSeperator{
+  width:80%;
+  margin:0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+
+
+
+
+
+
+
+
+.sprite {
+  background-image: url('../images/menu/menu_spritesheet2.png');
+  background-repeat: no-repeat;
+  display: block;
+  transform: scale(0.6);
+
+}
+
+.sprite-bird {
+  width: 23px;
+  height: 38px;
+  background-position: -5px -5px;
+}
+
+.sprite-bird_white {
+  width: 23px;
+  height: 38px;
+  background-position: -38px -5px;
+  &:hover{
+    background-position: -5px -5px;
+  }
+}
+
+.sprite-burger {
+  width: 28px;
+  height: 22px;
+  background-position: -71px -5px;
+}
+
+.sprite-cat {
+  width: 26px;
+  height: 30px;
+  background-position: -109px -5px;
+}
+
+.sprite-cat_white {
+  width: 26px;
+  height: 30px;
+  background-position: -145px -5px;
+  &:hover{
+    background-position: -109px -5px;
+  }
+}
+
+.sprite-dog {
+  width: 27px;
+  height: 29px;
+  background-position: -71px -45px;
+}
+
+.sprite-dog_white {
+  width: 27px;
+  height: 29px;
+  background-position: -108px -45px;
+  &:hover{
+    background-position: -71px -45px;
+  }
+}
+
+.sprite-faq {
+  width: 20px;
+  height: 33px;
+  background-position: -145px -45px;
+}
+
+.sprite-fish {
+  width: 27px;
+  height: 27px;
+  background-position: -5px -88px;
+}
+
+.sprite-fish_white {
+  width: 27px;
+  height: 27px;
+  background-position: -42px -88px;
+  &:hover{
+    background-position: -5px -88px;
+  }
+}
+
+.sprite-hamster {
+  width: 27px;
+  height: 30px;
+  background-position: -79px -88px;
+}
+
+.sprite-hamster_white {
+  width: 27px;
+  height: 30px;
+  background-position: -116px -88px;
+  &:hover{
+    background-position: -79px -88px;
+  }
+}
+
+.sprite-kowloon-logo {
+  width: 180px;
+  height: 22px;
+  background-position: -5px -128px;
+}
+
+.sprite-kownloon_single {
+  width: 24px;
+  height: 21px;
+  background-position: -153px -88px;
+}
+
+.sprite-search {
+  width: 29px;
+  height: 29px;
+  background-position: -181px -5px;
+}
+

@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ArticlesSeeder::class);
         $this->call(ArticlesTransSeeder::class);
         $this->call(ColorSeeder::class);
+        $this->call(ArticleFaqSeeder::class);
     }
 }

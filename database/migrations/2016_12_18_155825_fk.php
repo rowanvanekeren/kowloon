@@ -20,8 +20,12 @@ class Fk extends Migration
             $table->foreign('specification_id')->references('id')->on('specifications')->onDelete('cascade');
         });
         Schema::table('articles_colors', function($table) {
+        $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
+        $table->foreign('color_id')->references('id')->on('colors')->onDelete('cascade');
+        });
+        Schema::table('articles_faqs', function($table) {
             $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
-            $table->foreign('color_id')->references('id')->on('colors')->onDelete('cascade');
+            $table->foreign('faq_id')->references('id')->on('faq')->onDelete('cascade');
         });
         Schema::table('specifications_translations', function($table) {
             $table->foreign('specification_id')->references('id')->on('specifications')->onDelete('cascade');
@@ -34,6 +38,13 @@ class Fk extends Migration
         });
         Schema::table('collection_translations', function($table) {
             $table->foreign('collection_id')->references('id')->on('collection')->onDelete('cascade');
+        });
+        Schema::table('images_translations', function($table) {
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
+        });
+        Schema::table('articles_images', function($table) {
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
         });
     }
 

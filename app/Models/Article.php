@@ -30,9 +30,20 @@ class Article extends Model
     }
 
 
+
+
     public function color()
     {
         return $this->belongsToMany('App\Models\Color', 'articles_colors');
+    }
+
+    public function faq()
+    {
+        return $this->belongsToMany('App\Models\Faq', 'articles_faqs');
+    }
+    public function image()
+    {
+        return $this->belongsToMany('App\Models\Image', 'articles_images');
     }
         
 }

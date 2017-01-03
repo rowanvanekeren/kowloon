@@ -19,6 +19,7 @@ class ArticlesTranslations extends Migration
             $table->increments('id');
             $table->string('title');
             $table->longText('description');
+            $table->longText('tags');
             $table->decimal('price', 10, 2);
             $table->unsignedInteger('collection_id')->nullable();
             $table->unsignedInteger('category_id')->nullable();

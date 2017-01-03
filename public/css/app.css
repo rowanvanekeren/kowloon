@@ -1,0 +1,393 @@
+html,
+h1,
+li,
+ul,
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+#sideNav {
+  position: absolute;
+  height: 100%;
+  background-color: #323232;
+  z-index: 10;
+  float: left;
+}
+
+.navBurger {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.navBurger div {
+  display: inline-block;
+}
+
+.navBurger .icon {
+  width: 35px;
+}
+
+.navBurger i {
+  margin: 0 auto;
+}
+
+.help .help-section {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.help .help-section div {
+  display: inline-block;
+}
+
+.help .help-section .icon {
+  width: 35px;
+}
+
+.help .help-section i {
+  margin: 0 auto;
+}
+
+.help .help-section a {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.help .help-section .icon-text-help {
+  color: #646464;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/*.inlinetest{
+  width:100%;
+  display: flex;
+  align-items: center;
+
+  div{
+    display: inline-block;
+
+  }
+  a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+   .icon{
+
+      width: $nav-width;
+    }
+    i{
+      margin: 0 auto;
+    }
+
+    .icon-text-animal{
+      color: $nav-animals-font-color;
+      font-family: $nav-font;
+    }
+    .icon-text-help{
+      color: $nav-help-font-color;
+      font-family: $nav-font;
+    }
+
+}*/
+.animals div {
+  display: inline-block;
+}
+
+.animals a {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.animals .icon {
+  width: 35px;
+}
+
+.animals i {
+  margin: 0 auto;
+}
+
+.animals .icon-text-animal {
+  color: #a1a1a1;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.animals .icon-text-help {
+  color: #646464;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.animals .dog {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.animals .dog .active .sprite-dog_white {
+  background-position: -71px -45px !important;
+}
+
+.animals .dog:hover .sprite-dog_white {
+  background-position: -71px -45px !important;
+}
+
+.animals .cat {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.animals .cat .active .sprite-cat_white {
+  background-position: -109px -5px !important;
+}
+
+.animals .cat:hover .sprite-cat_white {
+  background-position: -109px -5px !important;
+}
+
+.animals .fish {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.animals .fish .active .sprite-fish_white {
+  background-position: -5px -88px !important;
+}
+
+.animals .fish:hover .sprite-fish_white {
+  background-position: -5px -88px !important;
+}
+
+.animals .bird {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.animals .bird .active .sprite-bird_white {
+  background-position: -5px -5px !important;
+}
+
+.animals .bird:hover .sprite-bird_white {
+  background-position: -5px -5px !important;
+}
+
+.animals .hamster {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.animals .hamster .active .sprite-hamster_white {
+  background-position: -79px -88px !important;
+}
+
+.animals .hamster:hover .sprite-hamster_white {
+  background-position: -79px -88px !important;
+}
+
+.sideNavMin {
+  width: 35px;
+}
+
+.sideNavCollapsed {
+  width: 130px;
+}
+
+.main {
+  position: relative;
+  width: calc(100% - 35px);
+  height: 100%;
+  background-color: blue;
+  float: right;
+}
+
+.navHelp {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.navBurger {
+  width: 35px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #252525;
+}
+
+#navFooter {
+  position: absolute;
+  bottom: 10px;
+}
+
+.navFooterMin {
+  left: 5px;
+}
+
+.navFooterCollapsed {
+  left: -25px;
+}
+
+.navSeperator {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.sprite {
+  background-image: url("../images/menu/menu_spritesheet2.png");
+  background-repeat: no-repeat;
+  display: block;
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+}
+
+.sprite-bird {
+  width: 23px;
+  height: 38px;
+  background-position: -5px -5px;
+}
+
+.sprite-bird_white {
+  width: 23px;
+  height: 38px;
+  background-position: -38px -5px;
+}
+
+.sprite-bird_white:hover {
+  background-position: -5px -5px;
+}
+
+.sprite-burger {
+  width: 28px;
+  height: 22px;
+  background-position: -71px -5px;
+}
+
+.sprite-cat {
+  width: 26px;
+  height: 30px;
+  background-position: -109px -5px;
+}
+
+.sprite-cat_white {
+  width: 26px;
+  height: 30px;
+  background-position: -145px -5px;
+}
+
+.sprite-cat_white:hover {
+  background-position: -109px -5px;
+}
+
+.sprite-dog {
+  width: 27px;
+  height: 29px;
+  background-position: -71px -45px;
+}
+
+.sprite-dog_white {
+  width: 27px;
+  height: 29px;
+  background-position: -108px -45px;
+}
+
+.sprite-dog_white:hover {
+  background-position: -71px -45px;
+}
+
+.sprite-faq {
+  width: 20px;
+  height: 33px;
+  background-position: -145px -45px;
+}
+
+.sprite-fish {
+  width: 27px;
+  height: 27px;
+  background-position: -5px -88px;
+}
+
+.sprite-fish_white {
+  width: 27px;
+  height: 27px;
+  background-position: -42px -88px;
+}
+
+.sprite-fish_white:hover {
+  background-position: -5px -88px;
+}
+
+.sprite-hamster {
+  width: 27px;
+  height: 30px;
+  background-position: -79px -88px;
+}
+
+.sprite-hamster_white {
+  width: 27px;
+  height: 30px;
+  background-position: -116px -88px;
+}
+
+.sprite-hamster_white:hover {
+  background-position: -79px -88px;
+}
+
+.sprite-kowloon-logo {
+  width: 180px;
+  height: 22px;
+  background-position: -5px -128px;
+}
+
+.sprite-kownloon_single {
+  width: 24px;
+  height: 21px;
+  background-position: -153px -88px;
+}
+
+.sprite-search {
+  width: 29px;
+  height: 29px;
+  background-position: -181px -5px;
+}
+
+/*# sourceMappingURL=app.css.map */

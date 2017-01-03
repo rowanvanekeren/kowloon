@@ -1,18 +1,4 @@
 @import "normalize";
 
-.sideNav{
-  position: absolute;
-  height: 100%;
-  width: 50px;
-  background-color: black;
-  float:left;
-}
 
-.main{
-  position: relative;
-  width: calc(100% - 50px);
-  height: 100%;
-  background-color: blue;
-  float:right;
 
-}

@@ -3,25 +3,24 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\App;
-/**
- * Class FaqTranslation
- */
-class FaqTranslation extends Model
+
+class ArticlesFaq extends Model
 {
-    protected $table = 'faq_translations';
+    protected $table = 'articles_faqs';
 
     public $timestamps = true;
 
     protected $fillable = [
-        'question',
-        'answer',
-        'locale',
+        'article_id',
         'faq_id'
     ];
 
     protected $guarded = [];
 
+    public function article()
+    {
+        return $this->belongsTo('App\Models\Article');
+    }
     public function faq()
     {
         return $this->belongsTo('App\Models\Faq');

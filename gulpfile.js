@@ -20,7 +20,13 @@ require('laravel-elixir-vue-2');
 
 elixir(function(mix) {
     mix.sass([
-        'test.scss'
-        ],'public/css/test.css'
+        'include.scss'
+        ],'public/css/app.css'
      )
+});
+
+elixir(function(mix) {
+    mix.scripts(
+        ['menu.js','filter.js'],'public/js/main.js', 'resources/assets/js'
+    );
 });

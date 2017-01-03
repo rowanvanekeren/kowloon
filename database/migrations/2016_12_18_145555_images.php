@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Articles extends Migration
+class Images extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class Articles extends Migration
      */
     public function up()
     {
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('hot_item');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class Articles extends Migration
      */
     public function down()
     {
-        Schema::drop('articles');
+        Schema::drop('images');
     }
 }

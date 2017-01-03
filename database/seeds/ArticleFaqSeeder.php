@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ArticlesSeeder extends Seeder
+class ArticleFaqSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class ArticlesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('articles')->delete();
+        DB::table('articles_faqs')->delete();
 
 
 
@@ -19,11 +19,12 @@ class ArticlesSeeder extends Seeder
         for ($i = 1; $i < $amount_of_repeats; $i++) {
             $article_row =
                 array(
+                    'article_id' => $i,
+                    'faq_id' => mt_rand(1,$amount_of_repeats -1 ),
                     'created_at' => \Carbon\Carbon::now(),
                     'updated_at' => \Carbon\Carbon::now(),
-                    'hot_item' => mt_rand(0,1)
                 );
-            DB::table('articles')->insert($article_row);
+            DB::table('articles_faqs')->insert($article_row);
         }
     }
 }

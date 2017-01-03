@@ -4,12 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\App;
-/**
- * Class Faq
- */
-class Faq extends Model
+class Image extends Model
 {
-    protected $table = 'faq';
+    protected $table = 'images';
 
     public $timestamps = true;
 
@@ -19,7 +16,7 @@ class Faq extends Model
 
     public function article()
     {
-        return $this->belongsToMany('App\Models\Article', 'articles_faqs' );
+        return $this->belongsToMany('App\Models\Article', 'articles_images' );
     }
 
     public function translation($language = null)
@@ -27,6 +24,6 @@ class Faq extends Model
         if ($language == null) {
             $language = App::getLocale();
         }
-        return $this->hasMany('App\Models\FaqTranslation')->where('locale', '=', $language);
+        return $this->hasMany('App\Models\ImagesTranslation')->where('locale', '=', $language);
     }
 }
