@@ -28,18 +28,23 @@ Route::group(['prefix' => '/{locale}'], function ($locale) {
 
     Route::get('/', 'Controller@GetHomeView');
     Route::get('/home', 'Controller@GetHomeView');
-    Route::get('dog', 'Controller@GetDogView');
-    Route::get('cat', 'Controller@GetCatView');
-    Route::get('fish', 'Controller@GetFishView');
-    Route::get('hamster', 'Controller@GetHamsterView');
-    Route::get('bird', 'Controller@GetBirdView');
+    Route::get('dog', 'CategoriesController@GetDogView');
+    Route::get('cat', 'CategoriesController@GetCatView');
+    Route::get('fish', 'CategoriesController@GetFishView');
+    Route::get('hamster', 'CategoriesController@GetHamsterView');
+    Route::get('bird', 'CategoriesController@GetBirdView');
     Route::get('help', 'Controller@GetHelpView');
     Route::get('search', 'Controller@GetSearchView');
-    Route::get('create_article', 'Controller@createView');
-    Route::get('update_faq/{id}', 'Controller@getFaqUpdateView');
-    Route::get('create_faq/{id?}', 'Controller@getFaqCreateView');
+
     Route::get('detail/{id}', 'Controller@getDetailView');
-    Route::get('update_article/{id}', 'Controller@getUpdateArticleView');
+
+
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('create_article', 'Controller@createView');
+        Route::get('update_faq/{id}', 'Controller@getFaqUpdateView');
+        Route::get('create_faq/{id?}', 'Controller@getFaqCreateView');
+        Route::get('update_article/{id}', 'Controller@getUpdateArticleView');
+    });
 /*    Route::get('dog', function ($locale) {
         App::setLocale($locale);
         return view('dog');
@@ -63,18 +68,22 @@ Route::group(['prefix' => '/{locale}'], function ($locale) {
 
     Auth::routes();
     Route::get('/login', array('as' => 'login', 'uses' => 'Auth\LoginController@getLogin'));
+    Route::get('/logout', array('as' => 'login', 'uses' => 'Auth\LoginController@logout'));
+/*    Route::post('/login', array('as' => 'login', 'uses' => 'Auth\LoginController@postLogin'));*/
     Route::post('/search', 'Controller@getSearchResults');
-    Route::post('/checked', 'Controller@getForm');
-    Route::post('/dog', 'Controller@getForm');
-    Route::post('/bird', 'Controller@getForm');
-    Route::post('/fish', 'Controller@getForm');
-    Route::post('/hamster', 'Controller@getForm');
-    Route::post('/cat', 'Controller@getForm');
+    Route::post('/checked', 'FilterController@getForm');
+    Route::post('/dog', 'FilterController@getForm');
+    Route::post('/bird', 'FilterController@getForm');
+    Route::post('/fish', 'FilterController@getForm');
+    Route::post('/hamster', 'FilterController@getForm');
+    Route::post('/cat', 'FilterController@getForm');
     Route::post('/create_article', 'Controller@createArticle');
+
+    Route::post('/update_article', 'Controller@updateArticle');
+    Route::post('/add_subscriber', 'EmailController@addSubscriber');
     Route::post('/update_faq', 'Controller@updateFaq');
     Route::post('/create_faq', 'Controller@createFaq');
-    Route::post('/update_article', 'Controller@updateArticle');
-    Route::post('/add_subscriber', 'MailController@addSubscriber');
+
 
 });
 
@@ -92,5 +101,4 @@ Route::group(['prefix' => '/{locale}'], function ($locale) {
 });*/
 
 
-Route::get('/home', 'HomeController@index');
 

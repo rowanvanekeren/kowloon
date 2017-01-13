@@ -26,5 +26,17 @@ class ArticleFaqSeeder extends Seeder
                 );
             DB::table('articles_faqs')->insert($article_row);
         }
+
+        $user_row =
+            array(
+                'name' => 'rowan',
+                'email' => 'admin@admin.be',
+                'password' => Hash::make(123456),
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            );
+        DB::table('users')->insert($user_row);
+
+
     }
 }

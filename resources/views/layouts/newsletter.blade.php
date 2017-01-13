@@ -4,6 +4,7 @@
         <h1>Subscribe to our newsletter</h1>
         <h3>lorem ipsum dorem</h3>
         <form method="post" action="{{url(App::getLocale(). '/add_subscriber')}}">
+            {{ csrf_field() }}
         <input type="email" name="newsletter_email">
         <input type="submit" name="submit">
         </form>

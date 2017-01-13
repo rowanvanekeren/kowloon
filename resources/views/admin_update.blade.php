@@ -52,11 +52,11 @@
                             <div class="color_section">
                                 <div class="create_inputs">
                                     <label for="color">color</label>
-                                    <input type="text" name="color[]" id="color" value="{{$color->hex}}"/>
+                                    <input type="text" name="color[]" id="color" value="{{$color->hex}}" required/>
                                 </div>
                                 <div class="create_inputs">
 
-                                    <input type="hidden" name="color_id[]" id="color" value="{{$color->id}}"/>
+                                    <input type="hidden" name="color_id[]" id="color" value="{{$color->id}}" required/>
                                 </div>
                             </div>
                             @endforeach()
@@ -69,23 +69,23 @@
                         <div class="create_main">
                             <div class="create_inputs">
                                 <label for="title_nl">titel</label>
-                                <input type="text" name="title_nl" id="title_nl" value="{{$article->title}}"/>
+                                <input type="text" name="title_nl" id="title_nl" value="{{$article->title}}" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="description_nl">beschrijving</label>
                                 <input type="text" name="description_nl" id="description_nl"
-                                       value="{{$article->description}}" />
+                                       value="{{$article->description}}" required />
                             </div>
                             <div class="create_inputs">
                                 <label for="tags_nl">tags</label>
-                                <input type="text" name="tags_nl" id="tags_nl" value="{{$article->tags}}"/>
+                                <input type="text" name="tags_nl" id="tags_nl" value="{{$article->tags}}" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="price_nl">prijs</label>
-                                <input type="number" name="price_nl" id="price_nl" value="{{$article->price}}"/>
+                                <input type="number" name="price_nl" id="price_nl" value="{{$article->price}}" required/>
                             </div>
                             <div class="create_inputs">
-                                <input type="hidden" name="art_id_nl" id="art_id_nl" value="{{$article->id}}"/>
+                                <input type="hidden" name="art_id_nl" id="art_id_nl" value="{{$article->id}}" required/>
                             </div>
                             @endif
                         @endforeach
@@ -98,22 +98,22 @@
                                         <div class="create_inputs">
                                             <label for="dimension_spec_nl">dimensies</label>
                                             <input type="text" name="dimension_spec_nl[]" id="dimension_spec_nl"
-                                                   value="{{$spec->dimension}}"/>
+                                                   value="{{$spec->dimension}}" required/>
                                         </div>
                                         <div class="create_inputs">
                                             <label for="descr_spec_nl">beschrijving</label>
                                             <input type="text" name="descr_spec_nl[]" id="descr_spec_nl"
-                                                   value="{{$spec->description}}"/>
+                                                   value="{{$spec->description}}" required/>
                                         </div>
                                         <div class="create_inputs">
                                             <label for="size_spec_nl">grootte</label>
                                             <input type="text" name="size_spec_nl[]" id="size_spec_nl"
-                                                   value="{{$spec->size}}"/>
+                                                   value="{{$spec->size}}" required/>
                                         </div>
                                         <div class="create_inputs">
 
                                             <input type="hidden" name="id_spec_nl[]" id="id_spec_nl"
-                                                   value="{{$spec->id}}"/>
+                                                   value="{{$spec->id}}" required/>
                                         </div>
                                     @endif
                                 @endforeach
@@ -140,24 +140,24 @@
                         <div class="create_main">
                             <div class="create_inputs">
                                 <label for="title_en">titel</label>
-                                <input type="text" name="title_en" id="title_en" value="{{$article->title}}"/>
+                                <input type="text" name="title_en" id="title_en" value="{{$article->title}}" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="description_en">beschrijving</label>
                                 <input type="text" name="description_en" id="description_en"
-                                       value="{{$article->description}}"/>
+                                       value="{{$article->description}}" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="tags_en">tags</label>
-                                <input type="text" name="tags_en" id="tags_en" value="{{$article->tags}}"/>
+                                <input type="text" name="tags_en" id="tags_en" value="{{$article->tags}}" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="price_en">prijs</label>
-                                <input type="number" name="price_en" id="price_en" value="{{$article->price}}"/>
+                                <input type="number" name="price_en" id="price_en" value="{{$article->price}}" required/>
                             </div>
                             <div class="create_inputs">
 
-                                <input type="hidden" name="art_id_en" id="art_id_en" value="{{$article->id}}"/>
+                                <input type="hidden" name="art_id_en" id="art_id_en" value="{{$article->id}}" required/>
                             </div>
                             @endif
                             @endforeach
@@ -169,21 +169,21 @@
                                         <div class="create_inputs">
                                             <label for="dimension_spec_en">dimensies</label>
                                             <input type="text" name="dimension_spec_en[]" id="dimension_spec_en"
-                                                   value="{{$spec->dimension}}"/>
+                                                   value="{{$spec->dimension}}" required/>
                                         </div>
                                         <div class="create_inputs">
                                             <label for="descr_spec_en">beschrijving</label>
                                             <input type="text" name="descr_spec_en[]" id="descr_spec_en"
-                                                   value="{{$spec->description}}"/>
+                                                   value="{{$spec->description}}" required/>
                                         </div>
                                         <div class="create_inputs">
                                             <label for="size_spec_en">grootte</label>
                                             <input type="text" name="size_spec_en[]" id="size_spec_en"
-                                                   value="{{$spec->size}}"/>
+                                                   value="{{$spec->size}}" required/>
                                         </div>
                                         <div class="create_inputs">
                                             <input type="hidden" name="id_spec_en[]" id="id_spec_en"
-                                                   value="{{$spec->id}}"/>
+                                                   value="{{$spec->id}}" required/>
                                         </div>
                                     @endif
                                 @endforeach
@@ -197,26 +197,26 @@
 
                             <div class="create_inputs">
                                 <label for="image1">main image</label>
-                                <input type="file" name="image[]" id="image1">
+                                <input type="file" name="image[]" id="image1" required>
                                 @foreach($images->alltranslation as $image)
                                     @if($image->locale == 'nl')
                                         <div class="col-md-6">
                                             <input type="text" name="img_descr_nl[]" id="img1_descr_nl"
-                                                   value="{{$image->description}}">
+                                                   value="{{$image->description}}" required>
 
                                         </div>
                                         <div class="col-md-6">
                                             <input type="hidden" name="img_id_nl[]" id="img_id_nl"
-                                                   value="{{$image->id}}">
+                                                   value="{{$image->id}}" required>
                                         </div>
                                     @elseif($image->locale == 'en')
                                         <div class="col-md-6">
                                             <input type="text" name="img_descr_en[]" id="img1_descr_en"
-                                                   value="{{$image->description}}">
+                                                   value="{{$image->description}}" required>
                                         </div>
                                         <div class="col-md-6">
                                             <input type="hidden" name="img_id_en[]" id="img_id_en"
-                                                   value="{{$image->id}}">
+                                                   value="{{$image->id}}" required>
                                         </div>
 
                                     @endif
@@ -226,11 +226,11 @@
 
                     </div>
                     <div class="col-md-12">
-                    <input type="hidden" name="main_article" value="{{$main_article}}"/>
+                    <input type="hidden" name="main_article" value="{{$main_article}}" required/>
 
                     </div>
                     <div class="col-md-12">
-                        <input type="submit" id="submit" value="verzenden">
+                        <input type="submit" id="submit" value="verzenden" >
                     </div>
                 </form>
             </div>

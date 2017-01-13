@@ -90,6 +90,28 @@ class Controller extends BaseController
        /* dd($request->id);*/
         App::setLocale($locale);
 
+        $this->validate($request, [
+            'dimension_spec_nl' => 'required',
+            'descr_spec_nl' => 'required',
+            'size_spec_nl' => 'required',
+            'dimension_spec_en' => 'required',
+            'descr_spec_en' => 'required',
+            'size_spec_en' => 'required',
+            'img_id_en' => 'required',
+            'image' => 'required',
+            'img_descr_nl' => 'required',
+            'img_descr_en' => 'required',
+            'color' => 'required',
+            'title_en' => 'required',
+            'img_descr_en' => 'required',
+            'img_descr_en' => 'required',
+            'img_descr_en' => 'required',
+            'img_descr_en' => 'required',
+            'img_descr_en' => 'required',
+            'img_descr_en' => 'required',
+            'img_descr_en' => 'required',
+        ]);
+
         foreach ($request->id_spec_nl as $key => $id) {
             $spec_nl = SpecificationsTranslation::find($id);
             $spec_nl->dimension = $request->dimension_spec_nl[$key];
@@ -396,67 +418,67 @@ class Controller extends BaseController
         $categories = $this->getCategories();
         return View('search', ['categories' => $categories]);
     }
+//
+//    public function getDogView($locale)
+//    {
+//        App::setLocale($locale);
+//
+//        $categories = $this->getCategories();
+//        $collections = Collection::with('translation')->get();
+//        $articles = $this->getArticlesByCategory($categories[0]->id);
+//
+//        return View('dog', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles]);
+//    }
+//
+//    public function getBirdView($locale)
+//    {
+//        App::setLocale($locale);
+//
+//        $categories = $this->getCategories();
+//        $collections = Collection::with('translation')->get();
+//        $articles = $this->getArticlesByCategory($categories[3]->id);
+//        /*  Input::flash();*/
+//        return View('bird', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles])->withInput(Input::all());
+//    }
+//
+//    public function getHamsterView($locale)
+//    {
+//        App::setLocale($locale);
+//        /*Input::reflash();*/
+//        $categories = $this->getCategories();
+//        $collections = Collection::with('translation')->get();
+//        $articles = $this->getArticlesByCategory($categories[4]->id);
+//
+//        return View('hamster', ['collections' => $collections, 'categories' => $categories,
+//            'articles' => $articles]);/*->withInput(Input::all());*/
+//    }
+//
+//    public function getCatView($locale)
+//    {
+//        App::setLocale($locale);
+//
+//        $categories = $this->getCategories();
+//        $collections = Collection::with('translation')->get();
+//        $articles = $this->getArticlesByCategory($categories[1]->id);
+//        /*        dd($articles);*/
+//        if (isset($articles)) {
+//            return View('cat', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles]);
+//        } else {
+//            return View('cat', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles])->withErrors(['no_articles' => Lang::get('errors.no_article')]);
+//        }
+//
+//    }
 
-    public function getDogView($locale)
-    {
-        App::setLocale($locale);
-
-        $categories = $this->getCategories();
-        $collections = Collection::with('translation')->get();
-        $articles = $this->getArticlesByCategory($categories[0]->id);
-
-        return View('dog', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles]);
-    }
-
-    public function getBirdView($locale)
-    {
-        App::setLocale($locale);
-
-        $categories = $this->getCategories();
-        $collections = Collection::with('translation')->get();
-        $articles = $this->getArticlesByCategory($categories[3]->id);
-        /*  Input::flash();*/
-        return View('bird', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles])->withInput(Input::all());
-    }
-
-    public function getHamsterView($locale)
-    {
-        App::setLocale($locale);
-        /*Input::reflash();*/
-        $categories = $this->getCategories();
-        $collections = Collection::with('translation')->get();
-        $articles = $this->getArticlesByCategory($categories[4]->id);
-
-        return View('hamster', ['collections' => $collections, 'categories' => $categories,
-            'articles' => $articles]);/*->withInput(Input::all());*/
-    }
-
-    public function getCatView($locale)
-    {
-        App::setLocale($locale);
-
-        $categories = $this->getCategories();
-        $collections = Collection::with('translation')->get();
-        $articles = $this->getArticlesByCategory($categories[1]->id);
-        /*        dd($articles);*/
-        if (isset($articles)) {
-            return View('cat', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles]);
-        } else {
-            return View('cat', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles])->withErrors(['no_articles' => Lang::get('errors.no_article')]);
-        }
-
-    }
-
-    public function getFishView($locale)
-    {
-        App::setLocale($locale);
-
-        $categories = $this->getCategories();
-        $collections = Collection::with('translation')->get();
-        $articles = $this->getArticlesByCategory($categories[2]->id);
-
-        return View('fish', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles]);
-    }
+//    public function getFishView($locale)
+//    {
+//        App::setLocale($locale);
+//
+//        $categories = $this->getCategories();
+//        $collections = Collection::with('translation')->get();
+//        $articles = $this->getArticlesByCategory($categories[2]->id);
+//
+//        return View('fish', ['collections' => $collections, 'categories' => $categories, 'articles' => $articles]);
+//    }
 
     public function getArticlesByCollection($locale, $coll_id)
     {
@@ -544,93 +566,93 @@ class Controller extends BaseController
         }
     }
 
-    public function getArticlesByFilter($cat_id, $coll_array, $min_price = 0, $max_price = 1000, $order_by = 'created_at', $order_by_updwn = 'DESC')
-    {
-        $pagination = 5;
-
-
-        $count = Article::with('translation')->whereHas('translation', function ($query) use ($cat_id, $coll_array, $min_price, $max_price) {
-            if (isset($coll_array[0])) {
-                $query->where('category_id', '=', $cat_id)->whereBetween('price', [$min_price, $max_price])->whereIn('collection_id', $coll_array);
-            } else {
-                $query->where('category_id', '=', $cat_id)->whereBetween('price', [$min_price, $max_price]);
-            }
-
-        })->count();
-
-
-        if ($count != 0) {
-            $articles = Article::with('translation')->whereHas('translation', function ($query) use ($cat_id, $coll_array, $min_price, $max_price, $order_by, $order_by_updwn) {
-                if (isset($coll_array[0])) {
-                    $query->where('category_id', '=', $cat_id)->whereBetween('price', [$min_price, $max_price])->whereIn('collection_id', $coll_array)->orderBy($order_by, $order_by_updwn);
-                } else {
-                    $query->where('category_id', '=', $cat_id)->whereBetween('price', [$min_price, $max_price])->orderBy($order_by, $order_by_updwn);
-                }
-            })->paginate($pagination);
-            /* dd($articles);*/
-            return $articles;
-        } else {
-            /*  $articles = Article::with('translation')->whereHas('translation', function($query) use ($cat_id, $coll_array, $min_price, $max_price) {
-                  $query->where('category_id', '=', $cat_id )->whereBetween('price', [$min_price, $max_price]);
-              })->paginate($pagination);*/
-            return null;
-        }
-    }
-
-    public function getForm($locale, Request $request)
-    {
-        Input::flash();
-        App::setLocale($locale);
-        $order_by = 'created_at';
-        $order_type = 'DESC';
-        $categories = $this->getCategories();
-        $collections = Collection::with('translation')->get();
-        switch ($request->order_by) {
-            case 'price_up':
-                $order_by = 'price';
-                $order_type = 'DESC';
-                break;
-            case 'price_down':
-                $order_by = 'price';
-                $order_type = 'ASC';
-                break;
-            case 'latest':
-                $order_by = 'created_at';
-                $order_type = 'DESC';
-                break;
-            case 'oldest':
-                $order_by = 'created_at';
-                $order_type = 'ASC';
-                break;
-            case 'default':
-                $order_by = 'created_at';
-                $order_type = 'DESC';
-                break;
-        }
-
-        $coll_ids = array();
-        if (isset($request->chkbx)) {
-            foreach ($request->chkbx as $key => $value) {
-                if ($value == 1) {
-                    array_push($coll_ids, $key);
-                }
-
-            };
-
-            /*  dd($this->getArticlesByFilter($request->category_id, $coll_ids));*/
-        }
-
-
-        $articles = $this->getArticlesByFilter($request->category_id, $coll_ids, $request->minprice, $request->maxprice, $order_by, $order_type);
-        if (!isset($articles) /*&& isset($coll_ids) || isset($request->minprice) || isset($request->maxprice)*/) {
-            $articles = $this->getArticlesByCategory($request->category_id, $order_by, $order_type);
-            return View($request->view_name, ['collections' => $collections, 'categories' => $categories, 'articles' => $articles])->withInput($request)->withErrors(['no_articles_filter' => Lang::get('errors.filter_null')]);
-        } else {
-            return View($request->view_name, ['collections' => $collections, 'categories' => $categories, 'articles' => $articles])->withInput($request);
-        }
-
-
-    }
+//    public function getArticlesByFilter($cat_id, $coll_array, $min_price = 0, $max_price = 1000, $order_by = 'created_at', $order_by_updwn = 'DESC')
+//    {
+//        $pagination = 5;
+//
+//
+//        $count = Article::with('translation')->whereHas('translation', function ($query) use ($cat_id, $coll_array, $min_price, $max_price) {
+//            if (isset($coll_array[0])) {
+//                $query->where('category_id', '=', $cat_id)->whereBetween('price', [$min_price, $max_price])->whereIn('collection_id', $coll_array);
+//            } else {
+//                $query->where('category_id', '=', $cat_id)->whereBetween('price', [$min_price, $max_price]);
+//            }
+//
+//        })->count();
+//
+//
+//        if ($count != 0) {
+//            $articles = Article::with('translation')->whereHas('translation', function ($query) use ($cat_id, $coll_array, $min_price, $max_price, $order_by, $order_by_updwn) {
+//                if (isset($coll_array[0])) {
+//                    $query->where('category_id', '=', $cat_id)->whereBetween('price', [$min_price, $max_price])->whereIn('collection_id', $coll_array)->orderBy($order_by, $order_by_updwn);
+//                } else {
+//                    $query->where('category_id', '=', $cat_id)->whereBetween('price', [$min_price, $max_price])->orderBy($order_by, $order_by_updwn);
+//                }
+//            })->paginate($pagination);
+//            /* dd($articles);*/
+//            return $articles;
+//        } else {
+//            /*  $articles = Article::with('translation')->whereHas('translation', function($query) use ($cat_id, $coll_array, $min_price, $max_price) {
+//                  $query->where('category_id', '=', $cat_id )->whereBetween('price', [$min_price, $max_price]);
+//              })->paginate($pagination);*/
+//            return null;
+//        }
+//    }
+//
+//    public function getForm($locale, Request $request)
+//    {
+//        Input::flash();
+//        App::setLocale($locale);
+//        $order_by = 'created_at';
+//        $order_type = 'DESC';
+//        $categories = $this->getCategories();
+//        $collections = Collection::with('translation')->get();
+//        switch ($request->order_by) {
+//            case 'price_up':
+//                $order_by = 'price';
+//                $order_type = 'DESC';
+//                break;
+//            case 'price_down':
+//                $order_by = 'price';
+//                $order_type = 'ASC';
+//                break;
+//            case 'latest':
+//                $order_by = 'created_at';
+//                $order_type = 'DESC';
+//                break;
+//            case 'oldest':
+//                $order_by = 'created_at';
+//                $order_type = 'ASC';
+//                break;
+//            case 'default':
+//                $order_by = 'created_at';
+//                $order_type = 'DESC';
+//                break;
+//        }
+//
+//        $coll_ids = array();
+//        if (isset($request->chkbx)) {
+//            foreach ($request->chkbx as $key => $value) {
+//                if ($value == 1) {
+//                    array_push($coll_ids, $key);
+//                }
+//
+//            };
+//
+//            /*  dd($this->getArticlesByFilter($request->category_id, $coll_ids));*/
+//        }
+//
+//
+//        $articles = $this->getArticlesByFilter($request->category_id, $coll_ids, $request->minprice, $request->maxprice, $order_by, $order_type);
+//        if (!isset($articles) /*&& isset($coll_ids) || isset($request->minprice) || isset($request->maxprice)*/) {
+//            $articles = $this->getArticlesByCategory($request->category_id, $order_by, $order_type);
+//            return View($request->view_name, ['collections' => $collections, 'categories' => $categories, 'articles' => $articles])->withInput($request)->withErrors(['no_articles_filter' => Lang::get('errors.filter_null')]);
+//        } else {
+//            return View($request->view_name, ['collections' => $collections, 'categories' => $categories, 'articles' => $articles])->withInput($request);
+//        }
+//
+//
+//    }
 
     public function getFaqUpdateView($locale, $id)
     {

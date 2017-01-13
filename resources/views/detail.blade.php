@@ -3,7 +3,16 @@
 
 @section('content')
     <div class="main container-fluid bg-color-1" ng-app="app">
+        @if (!Auth::guest())
+            <div class="adminArea">
+                <ul>
+                    <li><a href="{{ url(App::getLocale() . '/update_article/' . $article->translation[0]->id ) }}">update</a></li>
+                    <li><a href="{{ url(App::getLocale() . '/create_faq/' . $article->translation[0]->id ) }}">add faq</a></li>
+                    <li><a href="{{ url(App::getLocale() . '/create_article/' ) }}">create new article</a></li>
+                </ul>
+            </div>
 
+        @endif
 
         <div class="col-md-8 col-md-offset-2">
 
@@ -86,7 +95,7 @@
             <div class="row related">
                 <ul>
                     @foreach($related as $rel)
-                   <li><a href="#"><div style="background-image: url({{asset('images/article_pictures/'.$rel->image[0]->translation[0]->image)}})">
+                   <li><a href="{{ url(App::getLocale() . '/detail/' . $rel->id) }}"><div style="background-image: url({{asset('images/article_pictures/'.$rel->image[0]->translation[0]->image)}})">
                            <div class="art_hover_overlay"
                                 style="visibility:hidden; background-image: url( {{asset('images/article_pictures/')}}@lang('page_content.art_hover_img')"> </div>
                        </div></a></li>

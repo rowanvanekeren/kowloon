@@ -50,7 +50,7 @@
                         </div>
                     @else
                         <div class="col-md-3 small_article">
-                            <a href="./details/{{$article->id}}">
+                            <a href="./detail/{{$article->id}}">
                                 <div class="art_img"
                                      style="background-image: url( {{asset('images/article_pictures/standard_small.jpg')}} )">
                                     <div class="art_hover_overlay"

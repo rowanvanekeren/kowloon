@@ -1,66 +1,68 @@
 
-.hidden{
+.hidden {
   display: none !important;
   visibility: hidden;
 }
 
-#sideNav{
+#sideNav {
   position: fixed;
-
 
   min-height: 100%;
   height: auto;
-  overflow-x:hidden;
+  overflow-x: hidden;
   background-color: $menu-color;
   z-index: 10;
 
-
 }
-.locale_flag{
+
+.locale_flag {
   margin-top: 15px;
   width: 30px;
   position: relative;
   left: calc(50% - 15px);
 }
-.navBurger{
-  width:100%;
+
+.navBurger {
+  width: 100%;
   display: flex;
   align-items: center;
-  div{
+  div {
     display: inline-block;
   }
-  .icon{
+  .icon {
     width: $nav-width;
   }
-  i{
+  i {
     margin: 0 auto;
   }
 }
-.help{
-  .help-section{
-    width:100%;
+
+.help {
+  .help-section {
+    width: 100%;
     display: flex;
     align-items: center;
-    div{
+    div {
       display: inline-block;
     }
-    .icon{
+    .icon {
       width: $nav-width;
     }
-    i{
+    i {
       margin: 0 auto;
     }
-    a{
+    a {
       display: flex;
       align-items: center;
       text-decoration: none;
     }
-    .icon-text-help{
+    .icon-text-help {
       color: $nav-help-font-color;
       font-family: $nav-font;
     }
   }
 }
+
 /*.inlinetest{
   width:100%;
   display: flex;
@@ -94,157 +96,152 @@
 
 }*/
 
-.animals{
-  div{
+.animals {
+  div {
     display: inline-block;
   }
-  a{
+  a {
     display: flex;
     align-items: center;
     text-decoration: none;
   }
-  .icon{
+  .icon {
 
     width: $nav-width;
   }
-  i{
+  i {
     margin: 0 auto;
   }
 
-  .icon-text-animal{
+  .icon-text-animal {
     color: $nav-animals-font-color;
     font-family: $nav-font;
   }
-  .icon-text-help{
+  .icon-text-help {
     color: $nav-help-font-color;
     font-family: $nav-font;
   }
-  .dog{
-    width:100%;
+  .dog {
+    width: 100%;
     display: flex;
     align-items: center;
-    .active{
-      .sprite-dog_white{
-        background-position: -71px -45px!important;
+    .active {
+      .sprite-dog_white {
+        background-position: -71px -45px !important;
       }
     }
-    &:hover{
-      .sprite-dog_white{
-        background-position: -71px -45px!important;
+    &:hover {
+      .sprite-dog_white {
+        background-position: -71px -45px !important;
       }
     }
   }
-  .cat{
-    width:100%;
+  .cat {
+    width: 100%;
     display: flex;
     align-items: center;
-    .active{
-      .sprite-cat_white{
-        background-position: -109px -5px!important;
+    .active {
+      .sprite-cat_white {
+        background-position: -109px -5px !important;
       }
     }
-    &:hover{
-      .sprite-cat_white{
-        background-position: -109px -5px!important;
+    &:hover {
+      .sprite-cat_white {
+        background-position: -109px -5px !important;
       }
     }
   }
-  .fish{
-    width:100%;
+  .fish {
+    width: 100%;
     display: flex;
     align-items: center;
-    .active{
-      .sprite-fish_white{
-        background-position: -5px -88px!important;
+    .active {
+      .sprite-fish_white {
+        background-position: -5px -88px !important;
       }
     }
-    &:hover{
-      .sprite-fish_white{
-        background-position: -5px -88px!important;
+    &:hover {
+      .sprite-fish_white {
+        background-position: -5px -88px !important;
       }
     }
   }
-  .bird{
-    width:100%;
+  .bird {
+    width: 100%;
     display: flex;
     align-items: center;
-    .active{
-      .sprite-bird_white{
-        background-position: -5px -5px!important;
+    .active {
+      .sprite-bird_white {
+        background-position: -5px -5px !important;
       }
     }
-    &:hover{
-      .sprite-bird_white{
-        background-position: -5px -5px!important;
+    &:hover {
+      .sprite-bird_white {
+        background-position: -5px -5px !important;
       }
     }
   }
-  .hamster{
-    width:100%;
+  .hamster {
+    width: 100%;
     display: flex;
     align-items: center;
-    .active{
-      .sprite-hamster_white{
-        background-position: -79px -88px!important;
+    .active {
+      .sprite-hamster_white {
+        background-position: -79px -88px !important;
       }
     }
-    &:hover{
-      .sprite-hamster_white{
-        background-position: -79px -88px!important;
+    &:hover {
+      .sprite-hamster_white {
+        background-position: -79px -88px !important;
       }
     }
   }
 }
-.sideNavMin{
+
+.sideNavMin {
   width: $nav-width
 
 }
 
-.sideNavCollapsed{
+.sideNavCollapsed {
   width: $nav-width-collapse;
-
 
 }
 
-
-
-.navHelp{
+.navHelp {
   margin-top: 10px;
   width: 100%;
 }
-.navBurger{
+
+.navBurger {
   width: $nav-width;
   padding-bottom: 5px;
   padding-top: 5px;
   background-color: $burger-bg-color;
 }
 
-#navFooter{
+#navFooter {
 
   position: absolute;
   bottom: 10px;
 }
-.navFooterMin{
+
+.navFooterMin {
   left: 5px;
 }
-.navFooterCollapsed{
+
+.navFooterCollapsed {
   left: -25px;
 
 }
-.navSeperator{
-  width:80%;
-  margin:0 auto;
+
+.navSeperator {
+  width: 80%;
+  margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid grey;
 }
-
-
-
-
-
-
-
 
 .sprite {
   background-image: url('../images/menu/menu_spritesheet2.png');
@@ -264,7 +261,7 @@
   width: 23px;
   height: 38px;
   background-position: -38px -5px;
-  &:hover{
+  &:hover {
     background-position: -5px -5px;
   }
 }
@@ -285,7 +282,7 @@
   width: 26px;
   height: 30px;
   background-position: -145px -5px;
-  &:hover{
+  &:hover {
     background-position: -109px -5px;
   }
 }
@@ -300,7 +297,7 @@
   width: 27px;
   height: 29px;
   background-position: -108px -45px;
-  &:hover{
+  &:hover {
     background-position: -71px -45px;
   }
 }
@@ -321,7 +318,7 @@
   width: 27px;
   height: 27px;
   background-position: -42px -88px;
-  &:hover{
+  &:hover {
     background-position: -5px -88px;
   }
 }
@@ -336,7 +333,7 @@
   width: 27px;
   height: 30px;
   background-position: -116px -88px;
-  &:hover{
+  &:hover {
     background-position: -79px -88px;
   }
 }
@@ -359,27 +356,47 @@
   background-position: -181px -5px;
 }
 
-.price-range{
+.price-range {
   width: 200px;
 }
 
-
-.errors{
+.errors {
   width: 100%;
-  ul{
+  ul {
     width: 100%;
   }
-  li{
+  li {
     width: 100%;
-    float:left;
+    float: left;
     list-style: none;
     padding: 15px;
     margin-bottom: 5px;
-    color:white;
+    color: white;
     border-radius: 5px;
     background-color: $error-color;
   }
 
+}
+
+.adminArea {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 400px;
+  height: 50px;
+  z-index: 20;
+  ul {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(99, 0, 9, 0.64);
+    padding: 15px;
+    text-align: center;
+    li {
+      text-align: center;
+      display:inline-block;
+      list-style: none;
+    }
+  }
 }
 
 

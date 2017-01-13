@@ -18,17 +18,17 @@
                         <div class="col-md-12">
                         <div class="col-md-6" id="faq_nl">
                             <h1>nl</h1>
-                            <input type="text" name="question_nl">
-                            <textarea name="answer_nl"></textarea>
+                            <input type="text" name="question_nl" required>
+                            <textarea name="answer_nl" required></textarea>
 
                         </div>
                         <div class="col-md-6" id="faq_en">
                             <h1>en</h1>
-                            <input type="text" name="question_en">
-                                  <textarea name="answer_en"> </textarea>
+                            <input type="text" name="question_en" required>
+                                  <textarea name="answer_en" required> </textarea>
                         </div>
                          @if(isset($article))
-                        <input type="hidden" name="faq_art_id" value={{$article->id}} />
+                        <input type="hidden" name="faq_art_id" value="{{$article->id}}" required  />
                         @endif
                         </div>
                         <div class="col-md-12">
@@ -52,10 +52,10 @@
 
                             <div class="col-md-6">
                                 <h1>{{$faq->locale}}</h1>
-                                <input type="text" name="question[]" value="{{$faq->question}}">
+                                <input type="text" name="question[]" value="{{$faq->question}}" required>
 
                                 <textarea name="answer[]">{{$faq->answer}}</textarea>
-                                <input type="hidden" name="faqtrans_id[]" value="{{$faq->id}}">
+                                <input type="hidden" name="faqtrans_id[]" value="{{$faq->id}}" required>
                             </div>
 
                         @endforeach

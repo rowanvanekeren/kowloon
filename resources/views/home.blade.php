@@ -3,7 +3,23 @@
 
 @section('content')
     <div class="main container-fluid bg-color-1" ng-app="app">
-
+        @if (Auth::guest())
+            <div class="adminArea">
+            <ul>
+                <li><a href="{{ url(App::getLocale() . '/login') }}">login</a></li>
+            </ul>
+            </div>
+        @else
+            <div class="adminArea">
+                <ul>
+                    <li><a href="{{ url(App::getLocale() . '/logout') }}">logout</a></li>
+                    <li><a href="{{ url(App::getLocale() . '/create_article/'  ) }}">create new article</a></li>
+                    <li><a href="{{ url(App::getLocale() . '/create_faq') }}">new faq</a></li>
+             {{--       <li><a href="{{ url(App::getLocale() . '/create_faq') }}"></a></li>
+                    <li><a href="{{ url(App::getLocale() . '/create_faq') }}">logout</a></li>--}}
+                </ul>
+            </div>
+        @endif
         <div class="row">
             <div class="col-md-12 page_banner"
                  style="background-image: url({{asset('images/banners/banner_dog1.jpg')}})">
