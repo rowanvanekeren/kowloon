@@ -28,4 +28,9 @@ class Specification extends Model
         }
         return $this->hasMany('App\Models\SpecificationsTranslation')->where('locale', '=', $language);
     }
+    public function alltranslation($language = null)
+    {
+
+        return $this->hasMany('App\Models\SpecificationsTranslation');
+    }
 }

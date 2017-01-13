@@ -27,6 +27,6 @@ elixir(function(mix) {
 
 elixir(function(mix) {
     mix.scripts(
-        ['menu.js','filter.js'],'public/js/main.js', 'resources/assets/js'
+        ['jquery-ui.min.js','menu.js','filter.js','search.js'],'public/js/main.js', 'resources/assets/js'
     );
 });

@@ -5,12 +5,22 @@
 }
 
 #sideNav{
-  position: absolute;
-  height: 100%;
+  position: fixed;
+
+
+  min-height: 100%;
+  height: auto;
+  overflow-x:hidden;
   background-color: $menu-color;
   z-index: 10;
-  float:left;
 
+
+}
+.locale_flag{
+  margin-top: 15px;
+  width: 30px;
+  position: relative;
+  left: calc(50% - 15px);
 }
 .navBurger{
   width:100%;
@@ -197,14 +207,7 @@
 }
 
 
-.main{
-  position: relative;
-  width: calc(100% - #{$nav-width});
-  height: 100%;
-  background-color: blue;
-  float:right;
 
-}
 .navHelp{
   margin-top: 10px;
   width: 100%;
@@ -355,4 +358,30 @@
   height: 29px;
   background-position: -181px -5px;
 }
+
+.price-range{
+  width: 200px;
+}
+
+
+.errors{
+  width: 100%;
+  ul{
+    width: 100%;
+  }
+  li{
+    width: 100%;
+    float:left;
+    list-style: none;
+    padding: 15px;
+    margin-bottom: 5px;
+    color:white;
+    border-radius: 5px;
+    background-color: $error-color;
+  }
+
+}
+
+
+
 

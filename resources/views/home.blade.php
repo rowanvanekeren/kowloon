@@ -2,17 +2,77 @@
 
 
 @section('content')
+    <div class="main container-fluid bg-color-1" ng-app="app">
 
-    <h1> @lang('page_title.home')</h1>
+        <div class="row">
+            <div class="col-md-12 page_banner"
+                 style="background-image: url({{asset('images/banners/banner_dog1.jpg')}})">
 
-    @if (isset($errors) && count($errors) > 0)
-        <div class="errors">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+            </div>
         </div>
-    @endif
-    @lang('faq.faq')
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row hot-items">
+                <ul>
+                    <li><a href=""><i class="sprite-big sprite-bird-big"></i>
+                    <h3 class="hot-items-h3">asdfasdf</h3></a>
+                    </li>
+                    <li><div class="hot-items-devider"></div></li>
+                    <li><a href=""><i class="sprite-big sprite-cat-big"></i>
+                        <h3 class="hot-items-h3">asdfasdf</h3></a></li>
+                    <li><div class="hot-items-devider"></div></li>
+                    <li><a href=""><i class="sprite-big sprite-dog-big"></i>    <h3 class="hot-items-h3">asdfasdf</h3> </a></li>
+                    <li><div class="hot-items-devider"></div></li>
+                    <li><a href=""><i class="sprite-big sprite-fish-big"></i>    <h3 class="hot-items-h3">asdfasdf</h3> </a></li>
+                    <li><div class="hot-items-devider"></div></li>
+                    <li><a href=""><i class="sprite-big sprite-hamster-big"></i>    <h3 class="hot-items-h3">asdfasdf</h3> </a></li>
+                    <li><div class="hot-items-devider"></div></li>
+                    <li><a href=""><i class="sprite-big sprite-other-big"></i>    <h3 class="hot-items-h3">asdfasdf</h3> </a></li>
+                </ul>
+            </div>
+            <h1>Hot Items</h1>
+
+{{--            <div class="row hotitems">
+                <ul>
+                    @foreach($articles as $article)
+                        <li><a href="#">
+                                <div style="background-image: url({{asset('images/article_pictures/'.$article->image[0]->translation[0]->image)}})">
+                                    <div class="art_hover_overlay"
+                                         style="visibility:hidden; background-image: url( {{asset('images/article_pictures/')}}@lang('page_content.art_hover_img')"></div>
+                                </div>
+                                <p class="hot-items-descr">sdfsdf</p><p class="hot-items-price">sdfsdf</p>
+                            </a></li>
+                    @endforeach
+                </ul>
+            </div>--}}
+            <div class="row ">
+
+                    @foreach($articles as $article)
+                        <div class="small_article hot-itmes-float">
+                                <a href="{{url(App::getLocale().'/detail/'. $article->id)}}">
+                                    <div class="art_img"
+                                         style="background-image: url( {{asset('images/article_pictures/'.$article->image[0]->translation[0]->image)}} )">
+                                        <div class="art_hover_overlay"
+                                             style="background-image: url( {{asset('images/article_pictures/')}}@lang('page_content.art_hover_img')"> </div>
+                                    </div>
+                                    <div class="art_content">
+                                        <p>{{$article->translation[0]->title}}</p>
+                                        <p>&euro;{{$article->translation[0]->price}}</p>
+                                    </div>
+                                </a>
+                            </div>
+                    @endforeach
+
+            </div>
+            <div class="row">
+                <div class="paginate">{{ $articles->links() }}</div>
+            </div>
+            @include('layouts.newsletter')
+            <div class="row">sdfsdfsdfsdfsfd</div>
+            <div class="row">sdfsdfsdfsdfsfd</div>
+            <div class="row">sdfsdfsdfsdfsfd</div>
+            <div class="row">sdfsdfsdfsdfsfd</div>
+            <div class="row">sdfsdfsdfsdfsfd</div>
+            <div class="row">sdfsdfsdfsdfsfd</div>
+        </div>
+    </div>
 @endsection

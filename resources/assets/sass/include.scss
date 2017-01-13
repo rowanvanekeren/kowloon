@@ -1,3 +1,11 @@
-@import "normalize";
 @import "var";
+@import "normalize";
+@import "global";
+
+@import "app";
+@import "home";
+@import "newsletter";
 @import "menu";
+@import "article_pages";
+@import "search";
+@import "detail";

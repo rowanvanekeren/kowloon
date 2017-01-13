@@ -1,0 +1,124 @@
+/*.hotitems {
+  margin-top: 25px;
+  ul {
+    width: 100%;
+    max-height: 220px;
+    overflow: hidden;
+    display: table;
+
+
+    li {
+      padding: 4px;
+
+      width: calc(25% - 25px);
+      height: 200px;
+      margin-right: 15px;
+      display: inline-block;
+      background-color: $article-bg-color;
+      &:hover{
+        .art_hover_overlay{
+          visibility: visible!important;
+          position: absolute;
+          z-index: 80;
+          width: 100%;
+          height: 100%;
+          background-size: cover !important;
+          background-repeat: no-repeat !important;
+          background-position: center;
+        }
+      }
+      div {
+        position: relative;
+        z-index: 60;
+
+        background-color: black;
+        width: 100%;
+        height: 80%;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center;
+      }
+    }
+  }
+}*/
+.hot-items-descr{
+  float:left;
+}
+.hot-items-price{
+  float:right;
+}
+.hot-itmes-float{
+float: left;
+}
+.hot-items{
+  margin-top: 15px;
+position: relative;
+  ul{
+
+    width: 100%;
+    height: 100px;
+  text-align: center;
+
+    i{
+
+     margin: 0 auto;
+    }
+    li{
+      position: relative;
+      height: 100%;
+      display: inline-block;
+
+    }
+  }
+}
+.hot-items-h3{
+
+}
+.hot-items-devider{
+  height: 90%;
+  width: 2px;
+  margin-left:15px;
+  margin-right:15px;
+  border-right: 2px solid $article-border-color;
+}
+.sprite-big {
+  background-image: url('../images/menu/spritesheet_big.png');
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-bird-big {
+  width: 41px;
+  height: 67px;
+  background-position: -5px -5px;
+}
+
+.sprite-cat-big {
+  width: 53px;
+  height: 61px;
+  background-position: -56px -5px;
+}
+
+.sprite-dog-big {
+  width: 59px;
+  height: 64px;
+  background-position: -119px -5px;
+}
+
+.sprite-fish-big {
+  width: 58px;
+  height: 58px;
+  background-position: -188px -5px;
+}
+
+.sprite-hamster-big {
+  width: 47px;
+  height: 51px;
+  background-position: -256px -5px;
+}
+
+.sprite-other-big {
+  width: 32px;
+  height: 32px;
+  background-position: -313px -5px;
+}

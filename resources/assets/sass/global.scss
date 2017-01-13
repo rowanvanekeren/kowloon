@@ -1,0 +1,14 @@
+.colors{
+  .color{
+    display:inline-block;
+    width: $color-circle-size;
+    height: $color-circle-size;
+    border-radius: 50%;
+    background-color:black;
+    border: 1px solid white;
+  }
+}
+
+.no-padding{
+  padding: 0 !important;
+}

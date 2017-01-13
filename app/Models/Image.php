@@ -26,4 +26,9 @@ class Image extends Model
         }
         return $this->hasMany('App\Models\ImagesTranslation')->where('locale', '=', $language);
     }
+    public function alltranslation()
+    {
+
+        return $this->hasMany('App\Models\ImagesTranslation');
+    }
 }

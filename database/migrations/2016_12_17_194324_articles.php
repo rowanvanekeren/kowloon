@@ -15,7 +15,7 @@ class Articles extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('hot_item');
+            $table->integer('hot_item')->nullable();
             $table->timestamps();
         });
     }

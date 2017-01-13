@@ -29,4 +29,10 @@ class Faq extends Model
         }
         return $this->hasMany('App\Models\FaqTranslation')->where('locale', '=', $language);
     }
+
+    public function alltranslation()
+    {
+
+        return $this->hasMany('App\Models\FaqTranslation');
+    }
 }

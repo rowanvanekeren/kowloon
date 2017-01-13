@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
    {{-- <link rel="stylesheet" type="text/css" href="../css/test.css">--}}
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/jquery-ui.css') }}">
     <title>Laravel</title>
 
 </head>
@@ -22,15 +23,15 @@
     </div>
     <div class="help">
         <div class="help-section">
-            <a href="#">
+            <a href="{{url(App::getLocale(). '/help')}}">
             <div class="icon"><i class="sprite sprite-search"></i></div>
-            <div class="icon-text-help hidden"></div>
+            <div class="icon-text-help hidden">@lang('page_content.help')</div>
             </a>
         </div>
         <div class="help-section">
-            <a href="#">
+            <a href="{{url(App::getLocale(). '/search')}}">
             <div class="icon"><i class="sprite sprite-faq"></i></div>
-            <div class="icon-text-help hidden">asdfsdfadfs</div>
+            <div class="icon-text-help hidden">@lang('page_content.search')</div>
             </a>
         </div>
     </div>
@@ -71,8 +72,16 @@
             </div>
 
         </div>
-        <h1><a href="{{ url('nl/' . $view_name) }}">nl</a></h1>
-        <h1><a href="{{ url('en/' . $view_name) }}">en</a></h1>
+        <div class="navSeperator">
+
+        </div>
+        <div>
+            <a href="{{ url('nl/' . $view_name) }}"><img class="locale_flag" src="{{asset('images/icons/nl.png')}}"> </a>
+        </div>
+        <div>
+            <a href="{{ url('en/' . $view_name) }}"><img class="locale_flag" src="{{asset('images/icons/en.png')}}"></a>
+        </div>
+
     <div id="navFooter" class="navFooterMin">
         <i id="navLogo" class="sprite sprite-kownloon_single"></i>
     </div>
@@ -80,9 +89,12 @@
 
 </div>
 
-<div class="main" ng-app="app">
+
+
 @yield('content')
-</div>
+
+
+
 <script src="{{ asset('/js/jquery-3.1.1.min.js') }}"></script>
 <script src="{{ asset('/js/angular.min.js') }}"></script>
 <script src="{{ asset('/js/main.js') }}"></script>

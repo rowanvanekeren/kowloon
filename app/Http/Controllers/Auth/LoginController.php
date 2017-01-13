@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use App\Models\Category;
+use Illuminate\Support\Facades\App;
 class LoginController extends Controller
 {
     /*
@@ -19,13 +20,19 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+    public function getLogin($locale){
 
+        App::setLocale($locale);
+        $categories = Category::with('translation')->get();
+        return View('auth/login', ['categories' => $categories]);
+    }
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
     protected $redirectTo = '/home';
+
 
     /**
      * Create a new controller instance.

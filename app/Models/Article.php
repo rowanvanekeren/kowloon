@@ -29,6 +29,12 @@ class Article extends Model
         return $this->hasMany('App\Models\ArticlesTranslation')->where('locale', '=', $language);
     }
 
+    public function alltranslation()
+    {
+
+        return $this->hasMany('App\Models\ArticlesTranslation');
+    }
+
 
 
 
