@@ -44,7 +44,7 @@
                             <div class="color_section">
                                 <div class="create_inputs">
                                     <label for="color">color</label>
-                                    <input type="text" name="color[]" id="color" placeholder="give color"/>
+                                    <input type="text" name="color[]" id="color" placeholder="give color" required />
                                 </div>
                             </div>
                         </div>
@@ -55,20 +55,20 @@
                         <div class="create_main">
                             <div class="create_inputs">
                                 <label for="title_nl">titel</label>
-                                <input type="text" name="title_nl" id="title_nl" placeholder="geef titel"/>
+                                <input type="text" name="title_nl" id="title_nl" placeholder="geef titel" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="description_nl">beschrijving</label>
                                 <input type="text" name="description_nl" id="description_nl"
-                                       placeholder="geef beschrijving"/>
+                                       placeholder="geef beschrijving" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="tags_nl">tags</label>
-                                <input type="text" name="tags_nl" id="tags_nl" placeholder="geef tags"/>
+                                <input type="text" name="tags_nl" id="tags_nl" placeholder="geef tags" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="price_nl">prijs</label>
-                                <input type="number" name="price_nl" id="price_nl" placeholder="geef prijs"/>
+                                <input type="number" name="price_nl" id="price_nl" placeholder="geef prijs" required/>
                             </div>
 
                         </div>
@@ -80,17 +80,17 @@
                                 <div class="create_inputs">
                                     <label for="dimension_spec_nl">dimensies</label>
                                     <input type="text" name="dimension_spec_nl[]" id="dimension_spec_nl"
-                                           placeholder="geef dimnesie"/>
+                                           placeholder="geef dimnesie" required/>
                                 </div>
                                 <div class="create_inputs">
                                     <label for="descr_spec_nl">beschrijving</label>
                                     <input type="text" name="descr_spec_nl[]" id="descr_spec_nl"
-                                           placeholder="geef beschrijving"/>
+                                           placeholder="geef beschrijving" required/>
                                 </div>
                                 <div class="create_inputs">
                                     <label for="size_spec_nl">grootte</label>
                                     <input type="text" name="size_spec_nl[]" id="size_spec_nl"
-                                           placeholder="geef grootte (s, m ,l)"/>
+                                           placeholder="geef grootte (s, m ,l)" required/>
                                 </div>
                             </div>
 
@@ -114,20 +114,20 @@
                         <div class="create_main">
                             <div class="create_inputs">
                                 <label for="title_en">titel</label>
-                                <input type="text" name="title_en" id="title_en" placeholder="geef titel"/>
+                                <input type="text" name="title_en" id="title_en" placeholder="geef titel" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="description_en">beschrijving</label>
                                 <input type="text" name="description_en" id="description_en"
-                                       placeholder="geef beschrijving"/>
+                                       placeholder="geef beschrijving" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="tags_en">tags</label>
-                                <input type="text" name="tags_en" id="tags_en" placeholder="geef tags"/>
+                                <input type="text" name="tags_en" id="tags_en" placeholder="geef tags" required/>
                             </div>
                             <div class="create_inputs">
                                 <label for="price_en">prijs</label>
-                                <input type="number" name="price_en" id="price_en" placeholder="geef prijs"/>
+                                <input type="number" name="price_en" id="price_en" placeholder="geef prijs" required/>
                             </div>
                         </div>
                         <div class="create_specifications_en">
@@ -138,17 +138,17 @@
                                 <div class="create_inputs">
                                     <label for="dimension_spec_en">dimensies</label>
                                     <input type="text" name="dimension_spec_en[]" id="dimension_spec_en"
-                                           placeholder="geef dimnesie"/>
+                                           placeholder="geef dimnesie" required/>
                                 </div>
                                 <div class="create_inputs">
                                     <label for="descr_spec_en">beschrijving</label>
                                     <input type="text" name="descr_spec_en[]" id="descr_spec_en"
-                                           placeholder="geef beschrijving"/>
+                                           placeholder="geef beschrijving" required/>
                                 </div>
                                 <div class="create_inputs">
                                     <label for="size_spec_en">grootte</label>
                                     <input type="text" name="size_spec_en[]" id="size_spec_en"
-                                           placeholder="geef grootte (s, m ,l)"/>
+                                           placeholder="geef grootte (s, m ,l)" required/>
                                 </div>
                             </div>
 
@@ -169,58 +169,58 @@
                     <div class="col-md-12">
                         <div class="create_inputs">
                             <label for="image1">main image</label>
-                            <input type="file" name="image[]" id="image1">
+                            <input type="file" name="image[]" id="image1" required>
 
                             <div class="col-md-6">
                                 <input type="text" name="img_descr_nl[]" id="img1_descr_nl"
-                                       placeholder="beschrijving foto">
+                                       placeholder="beschrijving foto" required>
 
                             </div>
                             <div class="col-md-6">
                                 <input type="text" name="img_descr_en[]" id="img1_descr_en"
-                                       placeholder="description image">
+                                       placeholder="description image" required>
                             </div>
                         </div>
                         <div class="create_inputs">
                             <label for="image2">image 2</label>
-                            <input type="file" name="image[]" id="image2">
+                            <input type="file" name="image[]" id="image2" required>
 
                             <div class="col-md-6">
                                 <input type="text" name="img_descr_nl[]" id="img2_descr_nl"
-                                       placeholder="beschrijving foto">
+                                       placeholder="beschrijving foto" required>
 
                             </div>
                             <div class="col-md-6">
                                 <input type="text" name="img_descr_en[]" id="img2_descr_en"
-                                       placeholder="description image">
+                                       placeholder="description image" required>
                             </div>
                         </div>
                         <div class="create_inputs">
                             <label for="image3">image 3</label>
-                            <input type="file" name="image[]" id="image3">
+                            <input type="file" name="image[]" id="image3" required>
 
                             <div class="col-md-6">
                                 <input type="text" name="img_descr_nl[]" id="img3_descr_nl"
-                                       placeholder="beschrijving foto">
+                                       placeholder="beschrijving foto" required>
 
                             </div>
                             <div class="col-md-6">
                                 <input type="text" name="img_descr_en[]" id="img3_descr_en"
-                                       placeholder="description image">
+                                       placeholder="description image" required>
                             </div>
                         </div>
                         <div class="create_inputs">
                             <label for="image4">image 4</label>
-                            <input type="file" name="image[]" id="image4">
+                            <input type="file" name="image[]" id="image4" required>
 
                             <div class="col-md-6">
                                 <input type="text" name="img_descr_nl[]" id="img4_descr_nl"
-                                       placeholder="beschrijving foto">
+                                       placeholder="beschrijving foto" required>
 
                             </div>
                             <div class="col-md-6">
                                 <input type="text" name="img_descr_en[]" id="img4_descr_en"
-                                       placeholder="description image">
+                                       placeholder="description image" required>
                             </div>
                         </div>
 

@@ -90,27 +90,27 @@ class Controller extends BaseController
        /* dd($request->id);*/
         App::setLocale($locale);
 
-        $this->validate($request, [
-            'dimension_spec_nl' => 'required',
-            'descr_spec_nl' => 'required',
-            'size_spec_nl' => 'required',
-            'dimension_spec_en' => 'required',
-            'descr_spec_en' => 'required',
-            'size_spec_en' => 'required',
-            'img_id_en' => 'required',
-            'image' => 'required',
-            'img_descr_nl' => 'required',
-            'img_descr_en' => 'required',
-            'color' => 'required',
-            'title_en' => 'required',
-            'img_descr_en' => 'required',
-            'img_descr_en' => 'required',
-            'img_descr_en' => 'required',
-            'img_descr_en' => 'required',
-            'img_descr_en' => 'required',
-            'img_descr_en' => 'required',
-            'img_descr_en' => 'required',
-        ]);
+//        $this->validate($request, [
+//            'dimension_spec_nl' => 'required',
+//            'descr_spec_nl' => 'required',
+//            'size_spec_nl' => 'required',
+//            'dimension_spec_en' => 'required',
+//            'descr_spec_en' => 'required',
+//            'size_spec_en' => 'required',
+//            'img_id_en' => 'required',
+//            'image' => 'required',
+//            'img_descr_nl' => 'required',
+//            'img_descr_en' => 'required',
+//            'color' => 'required',
+//            'title_en' => 'required',
+//            'img_descr_en' => 'required',
+//            'img_descr_en' => 'required',
+//            'img_descr_en' => 'required',
+//            'img_descr_en' => 'required',
+//            'img_descr_en' => 'required',
+//            'img_descr_en' => 'required',
+//            'img_descr_en' => 'required',
+//        ]);
 
         foreach ($request->id_spec_nl as $key => $id) {
             $spec_nl = SpecificationsTranslation::find($id);
