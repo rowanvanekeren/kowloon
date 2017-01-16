@@ -12,7 +12,10 @@
 
 </head>
 <body>
-
+<div class="cookiebar">
+    <h1>Deze site maakt gebruik van cookies</h1>
+    <button id="cookiebtn" type="button">Begrepen</button>
+</div>
 <div id='sideNav' class="sideNavMin">
     <div class="navFixed">
 

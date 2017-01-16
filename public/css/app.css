@@ -8283,6 +8283,17 @@ button.close {
   list-style: none;
 }
 
+.cookiebar {
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  top: 0;
+  background-color: white;
+  left: calc(50% - 300px);
+  z-index: 50;
+  padding: 15px;
+}
+
 .page_banner {
   height: 500px;
   background-size: cover !important;
