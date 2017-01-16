@@ -30,19 +30,19 @@
             <div class="row hot-items">
                 <ul>
                     <li><a href=""><i class="sprite-big sprite-bird-big"></i>
-                    <h3 class="hot-items-h3">asdfasdf</h3></a>
+                    <h3 class="hot-items-h3">{{$categories[3]->translation[0]->type}}</h3></a>
                     </li>
                     <li><div class="hot-items-devider"></div></li>
-                    <li><a href=""><i class="sprite-big sprite-cat-big"></i>
-                        <h3 class="hot-items-h3">asdfasdf</h3></a></li>
+                    <li><a href="{{url(App::getLocale(). '/cat')}}"><i class="sprite-big sprite-cat-big"></i>
+                        <h3 class="hot-items-h3">{{$categories[1]->translation[0]->type}}</h3></a></li>
                     <li><div class="hot-items-devider"></div></li>
-                    <li><a href=""><i class="sprite-big sprite-dog-big"></i>    <h3 class="hot-items-h3">asdfasdf</h3> </a></li>
+                    <li><a href="{{url(App::getLocale(). '/dog')}}"><i class="sprite-big sprite-dog-big"></i>    <h3 class="hot-items-h3">{{$categories[0]->translation[0]->type}}</h3> </a></li>
                     <li><div class="hot-items-devider"></div></li>
-                    <li><a href=""><i class="sprite-big sprite-fish-big"></i>    <h3 class="hot-items-h3">asdfasdf</h3> </a></li>
+                    <li><a href="{{url(App::getLocale(). '/fish')}}"><i class="sprite-big sprite-fish-big"></i>    <h3 class="hot-items-h3">{{$categories[2]->translation[0]->type}}</h3> </a></li>
                     <li><div class="hot-items-devider"></div></li>
-                    <li><a href=""><i class="sprite-big sprite-hamster-big"></i>    <h3 class="hot-items-h3">asdfasdf</h3> </a></li>
+                    <li><a href="{{url(App::getLocale(). '/hamster')}}"><i class="sprite-big sprite-hamster-big"></i>    <h3 class="hot-items-h3">{{$categories[4]->translation[0]->type}}</h3> </a></li>
                     <li><div class="hot-items-devider"></div></li>
-                    <li><a href=""><i class="sprite-big sprite-other-big"></i>    <h3 class="hot-items-h3">asdfasdf</h3> </a></li>
+                    <li><a href=""><i class="sprite-big sprite-other-big"></i>    <h3 class="hot-items-h3">{{$categories[5]->translation[0]->type}}</h3> </a></li>
                 </ul>
             </div>
             <h1>Hot Items</h1>
